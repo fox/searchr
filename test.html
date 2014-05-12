@@ -17,10 +17,10 @@
   searchr.clearDefault();
   
   test('build search with 2 keywords', function() {
-    var urls = searchr.buildSearchUrls('d+w radiohead');
+    var urls = searchr.buildSearchUrls('d+w house of cards');
     console.log(urls)
-    equal(urls[0], 'https://duckduckgo.com/?q=radiohead');
-    equal(urls[1], 'http://en.wikipedia.org/wiki/radiohead');
+    equal(urls[0], 'https://duckduckgo.com/?q=house+of+cards');
+    equal(urls[1], 'http://en.wikipedia.org/wiki/house+of+cards');
   });
 
   test('build search with no keyword', function() {

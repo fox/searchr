@@ -94,7 +94,7 @@
     var urls = [];
     var words = query.split(' ');
     var keys = words.shift().split('+');
-    var search = words.join(' ').replace(' ', '+');
+    var search = words.join('+');
     var engines = searchr.getEngines();
     
     keys.forEach(function(key) {
@@ -106,7 +106,7 @@
     if (urls.length == 0) {
       var key = searchr.getDefault();
       if (key && engines[key]) {
-        urls.push(engines[key].replace('%s', query.replace(' ', '+'))); 
+        urls.push(engines[key].replace('%s', query.replace(/ /, '+'))); 
       }      
     }
     

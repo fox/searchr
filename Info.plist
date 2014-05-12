@@ -27,7 +27,7 @@
 		<dict/>
 	</dict>
 	<key>Description</key>
-	<string>Keyword searching from the address bar</string>
+	<string>Provides search of any website using keywords</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
