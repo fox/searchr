@@ -44,7 +44,7 @@
       fb: "https://www.facebook.com/search/results.php?q=%s",
       tw: "https://twitter.com/search?q=%s",
       l: "http://www.google.com/search?q=%s&btnI",
-      la: "http://www.last.fm/search?q=radiohead",
+      la: "http://www.last.fm/search?q=%s",
       li: "https://www.linkedin.com/vsearch/f?type=all&keywords=%s",
       h: "http://hypem.com/search/%s/1/",
       im: "http://www.imdb.com/find?q=%s",
