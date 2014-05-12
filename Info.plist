@@ -38,6 +38,6 @@
 	<key>Update Manifest URL</key>
 	<string>https://github.com/fox/searchr/blob/master/Searchr.plist</string>
 	<key>Website</key>
-	<string>http://searchr.hakeraj.com</string>
+	<string>http://hakeraj.com/searchr</string>
 </dict>
 </plist>
