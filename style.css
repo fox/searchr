@@ -1,0 +1,76 @@
+@import url(http://fonts.googleapis.com/css?family=Kreon:300);
+
+body {
+  font-weight: normal;
+  font-family: "Kreon", sans-serif;
+	color: #000;
+  width: 30em;
+  font-size: 1.2em;
+	margin: 3em auto;
+  background-color: #fff;
+}
+
+header {
+  background: url(./Icon-128.png) no-repeat;
+  padding-top: 5px;
+  padding-left: 150px;
+  height: 150px;
+}
+
+h1, h2, h3 {  
+  font-weight: normal;
+  color: #839AB3;
+}
+
+input {
+  position: relative;
+  top: 9px;
+}
+
+
+h1 {
+  font-size: 4.5em;
+  margin:0px;
+}
+
+p {
+  text-align: justify;
+}
+
+a {
+  color: #000;
+  text-decoration: underline;
+}
+
+textarea {
+  width: 100%;
+}
+
+textarea, input {
+  resize: none;
+  border: 0;
+  overflow: scroll;
+  overflow-x: hidden;
+  font-family: monaco;
+}
+
+textarea, tt, input {
+  font-family: monaco;
+  font-size: 10pt;
+  white-space: nowrap;
+  background-color: #FEF5d4;
+  padding: 5px;
+  color: #000;
+  border-radius: 5px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+footer {
+  margin-top: 5em;
+}

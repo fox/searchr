@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Searchr</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css"></link>
+  <script src="settings.js" type="text/javascript"></script>
+  <script src="searchr.js" type="text/javascript"></script>
+</head>
+<body>
+<header><h1>Searchr</h1></header>
+
+<label for='engines'>Search engines:</label>
+<textarea id='engines'></textarea>
+
+<p>
+  To add a search engine, enter one URL per line preceded by keyword. URL has to contain 
+  <tt>%s</tt> - which is where the search text goes.
+</p>
+
+<label for='default'>Default search engine:</label>
+<input id='default' size="3"></input>
+
+
+<p>
+  Type the search engine's keywords that's used by default. If blank, 
+  a default Safari search engine is used.
+</p>
+
+
+<footer>
+  Searchr is created by Saša Branković <a href="http://twitter.com/hakeraj">@hakeraj</a> &bull; <a href="">Source code</a>
+</footer>  
+<script>
+  function load() {
+    var engines = searchr.getEngines();
+    var str = [];
+    for(var key in engines) {
+      str.push(key + ' ' + engines[key]);
+    }
+    var rows = str.length;
+    var minRows = 7;
+    if (rows < minRows) { 
+      rows = minRows; 
+    }
+    enginesField.rows = rows;
+    enginesField.value = str.join("\n")
+  
+    defaultField.value = searchr.getDefault();
+  }
+  
+  function save() {
+    var engines = {};
+    enginesField.value.split("\n").forEach(function(row) {
+      row = row.trim().split(' ');
+      var key = row[0].trim();
+      if (!row[1]) {
+        return;
+      }
+      var value = row[1].trim();
+      engines[key] = value;
+    });
+    searchr.saveEngines(engines);
+
+    var keyword = defaultField.value;
+    searchr.saveDefault(keyword);
+  }
+  
+  var keyPressTimeout;
+  function onKeyPress() {
+    if (keyPressTimeout) {
+      clearTimeout(keyPressTimeout);
+    }
+    keyPressTimeout = setTimeout(save, 300);
+  }
+  
+  var enginesField = document.getElementById('engines');
+  var defaultField = document.getElementById('default');
+  enginesField.onchange = enginesField.onkeypress = defaultField.onchange = defaultField.onkeypress = onKeyPress;
+  
+  load();
+  window.onbeforeunload = save;
+</script>
+</body>
+</html>
