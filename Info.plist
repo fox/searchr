@@ -36,7 +36,7 @@
 		<dict/>
 	</dict>
 	<key>Update Manifest URL</key>
-	<string>https://github.com/fox/searchr/blob/master/Searchr.plist</string>
+	<string>https://github.com/fox/searchr/raw/master/Searchr.plist</string>
 	<key>Website</key>
 	<string>http://hakeraj.com/searchr</string>
 </dict>
