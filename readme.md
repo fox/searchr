@@ -4,7 +4,7 @@ Safari extension that provides search of any website using keywords.
 
 ## Users
 
-Go to [here](http://hakeraj.com/searchr).
+[Go here](http://hakeraj.com/searchr).
 
 ## Developers
 
