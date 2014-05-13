@@ -19,7 +19,14 @@
     } else {
       value = localStorage[key];
     }
-    return value ? JSON.parse(value) : (def ? def() : null);
+    if (value) { 
+      try {
+        var out = JSON.parse(value);
+        return out;
+      } catch (e) {}
+    } 
+    
+    return def ? def() : null;
   }
   
   settings.set = function(key, value) { 
