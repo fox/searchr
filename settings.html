@@ -15,7 +15,7 @@
 
 <p>
   To add a search engine, enter one URL per line preceded by keyword. URL has to contain 
-  <tt>%s</tt> - which is where the search text goes.
+  <tt>%s</tt> - which is where the search text goes. If you're stuck, <a href="javascript: reset()">reset list</a>.
 </p>
 
 <label for='default'>Default search engine:</label>
@@ -47,6 +47,13 @@
     defaultField.value = searchr.getDefault();
   }
   
+  function reset() {
+    if (enginesField.value.trim().length == 0 || confirm("Are you sure? This is going to replace search engines list with default.")) {
+      searchr.clearEngines();
+      load();
+    }
+  }
+  
   function save() {
     var engines = {};
     enginesField.value.split("\n").forEach(function(row) {
@@ -75,9 +82,9 @@
   var enginesField = document.getElementById('engines');
   var defaultField = document.getElementById('default');
   enginesField.onchange = enginesField.onkeypress = defaultField.onchange = defaultField.onkeypress = onKeyPress;
-  
-  load();
+  enginesField.onblur = defaultField.onblur = save;
   window.onbeforeunload = save;
+  load();
 </script>
 </body>
 </html>
