@@ -106,7 +106,7 @@
     if (urls.length == 0) {
       var key = searchr.getDefault();
       if (key && engines[key]) {
-        urls.push(engines[key].replace('%s', query.replace(/ /, '+'))); 
+        urls.push(engines[key].replace('%s', query.replace(/ +/g, '+'))); 
       }      
     }
     
