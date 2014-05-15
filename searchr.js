@@ -30,7 +30,7 @@
       b: "https://www.bing.com/search?q=%s",
       bt: "https://btdigg.org/search?info_hash=&q=%s",
       br: "http://www.britannica.com/search?query=%s",
-      d: "https://duckduckgo.com/?q=%s",
+      d: "https://next.duckduckgo.com/?q=%s",
       eb: "http://www.ebay.com/sch/i.html?_nkw=%s",
       fe: "http://feedly.com/#search%2F%s",
       fi: "http://www.filecrop.com/search.php?w=%s",
